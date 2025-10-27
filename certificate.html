@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Сертификат о прохождении курса</title>
+  <style>
+    @page {
+      size: landscape;
+      margin: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .certificate {
+      width: 1000px;
+      margin: 30px auto;
+      border: 8px solid #2a4d69;
+      background: #fff;
+      padding: 50px;
+      text-align: center;
+    }
+    h1 {
+      color: #2a4d69;
+      font-size: 42px;
+      margin-bottom: 40px;
+    }
+    .name {
+      font-size: 32px;
+      margin: 30px 0;
+      font-weight: bold;
+      color: #1a3347;
+    }
+    .course {
+      font-size: 24px;
+      color: #555;
+      margin: 30px 0;
+    }
+    .date {
+      font-size: 20px;
+      color: #777;
+      margin: 30px 0;
+    }
+    .footer {
+      margin-top: 80px;
+      display: table;
+      width: 100%;
+    }
+    .footer div {
+      text-align: center;
+      display: table-cell;
+      width: 50%;
+      vertical-align: top;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <h1>Сертификат</h1>
+    <p>Настоящим подтверждается, что</p>
+    <div class="name">${student_name}</div>
+    <p>успешно завершил(а) курс</p>
+    <div class="course">${course_name}</div>
+    <div class="date">Дата: ${cert_date}</div>
+    <div class="footer">
+      <div>
+        <hr style="width: 150px;">
+        <p>Руководитель программы</p>
+      </div>
+      <div>
+        <hr style="width: 150px;">
+        <p>Печать / Подпись</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

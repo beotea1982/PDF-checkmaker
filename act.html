@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Акт выполненных работ</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif;
+      background: #fff; 
+      margin: 40px;
+    }
+    .container { 
+      max-width: 800px; 
+      margin: 0 auto; 
+      border: 1px solid #aaa; 
+      padding: 40px;
+    }
+    .act-title { 
+      text-align: center; 
+      font-size: 24px; 
+      font-weight: bold; 
+      margin-bottom: 30px; 
+    }
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin-bottom: 24px;
+    }
+    th, td { 
+      border: 1px solid #999; 
+      padding: 8px 6px; 
+      text-align: left;
+    }
+    th { 
+      background: #eaeaea;
+    }
+    .sign-row { 
+      margin-top: 50px; 
+      display: table;
+      width: 100%;
+    }
+    .sign-box { 
+      text-align: center;
+      display: table-cell;
+      width: 50%;
+    }
+    .small { 
+      font-size: 12px; 
+      color: #555; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="act-title">Акт № ${act_number} от ${act_date}</div>
+    <div>К договору № ${contract_number}</div>
+    <div>Адрес объекта: ${object_address}</div>
+    <br>
+    <table>
+      <tr>
+        <th>№</th>
+        <th>Наименование работ/услуг</th>
+        <th>Кол-во</th>
+        <th>Ед.</th>
+        <th>Цена за ед., ₽</th>
+        <th>Сумма, ₽</th>
+      </tr>
+      ${positions_rows}
+    </table>
+    <div>Итого: <b>${total_amount} ₽</b></div>
+    <br><br>
+    <div class="small">Заказчик: ${client}</div>
+    <div class="small">Исполнитель: ${contractor}</div>
+    <div class="sign-row">
+      <div class="sign-box">
+        _______________________<br>Заказчик
+      </div>
+      <div class="sign-box">
+        _______________________<br>Исполнитель
+      </div>
+    </div>
+  </div>
+</body>
+</html>
